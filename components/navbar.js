@@ -8,7 +8,7 @@ export default function Navbar({ children }) {
     <div className='h-[38px]'>
       <div className='h-[38px] bg-[#0a0a23] text-white flex items-center flex-wrap p-1'>
         <div className='hidden lg:flex block flex-1 justify-end'></div>
-        <Link href='/classes'>
+        <Link href='/classes' passHref>
           <a className='flex items-center'>
             <Image
               className=''
@@ -22,7 +22,7 @@ export default function Navbar({ children }) {
           </a>
         </Link>
         <div className='flex-1 inline-flex justify-end'>
-          {React.Children.toArray(children).length > 1 ? (
+          {/* {React.Children.toArray(children).length > 1 ? (
             children.map(children => (
               <div className='pl-2 hidden md:block' key={children}>
                 <p>{children}</p>
@@ -30,7 +30,8 @@ export default function Navbar({ children }) {
             ))
           ) : (
             <div className='pl-2 hidden md:block'>{children}</div>
-          )}
+          )} */}
+          {children}
           <div className='pl-2'>
             <AuthButton></AuthButton>
           </div>
